@@ -24,14 +24,20 @@ Tested locally using Minikube. Since Minikube is a local cluster, it doesn't pro
 ## How to Run Locally
 
 '''bash
+
 #Build Docker image
+
 docker build -t karthik-app:v1 .
 
 #Run container
+
 docker run -d -p 8080:80 karthik-app:v1
 
 #Or deploy to Kubernetes
+
 kubectl apply -f k8s/deployment.yaml
+
 kubectl apply -f k8s/service.yaml
+
 '''
 
