@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: karthik-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: karthik
+  template:
+    metadata:
+      labels:
+        app: karthik
+    spec:
+      containers:
+      - name: karthik-app
+        image: karthik1082/karthik-app:latest
+        ports:
+        - containerPort: 80
+
