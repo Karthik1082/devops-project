@@ -1,5 +1,5 @@
 from flask import Flask
-app = Flask(__app__)
+app = Flask(__name__)
 @app.route('/')
 def home():
     return "Karthik Devops Project"
@@ -8,4 +8,4 @@ def home():
 def skills():
     return "Docker,Kubernetes,GitHub Actions"
 
-app.run(host:'0.0.0.0', port=5000)
+app.run(host='0.0.0.0', port=5000)

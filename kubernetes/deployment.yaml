@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-deployment
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: karthik-new
+  template:
+    metadata:
+      labels:
+        app: karthik-new
+    spec:
+      containers:
+      - name: python-container
+        image: karthik1082/karthiknewapp:latest
+        ports:
+        - containerPort: 5000
